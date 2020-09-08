@@ -3,13 +3,18 @@
 
 from nltk.corpus import words
 word_list_orginal = words.words()
-import random
 
 word_list = set([word.lower() for word in word_list_orginal])
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def encrypt(words, key):
+    '''
+    Encrypt your string with 'caesar_cipher' way:
+        inp ---> your inputed string
+        inp2 ---> the key you want to encrypt with
+        out >>> the string after encrypt
+    '''
     encrypted_words = ''
 
     for char in words.lower():
@@ -22,8 +27,17 @@ def encrypt(words, key):
 
 
 def decrypt(words):
-
+    '''
+    Dncrypt your string with 'caesar_cipher' way:
+        inp ---> your inputed encrypted string
+        out >>> the string after decrypt
+    '''
     def english_words(list_of_words):
+        '''
+        small method to count the number of english_words in the sentence..
+            inp ---> tested string
+            out >>> bolean if the number of english is greater one..
+        '''
         number_correct = 0
         for word in list_of_words:
             if word in word_list:
