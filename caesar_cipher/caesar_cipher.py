@@ -26,7 +26,17 @@ def encrypt(words, key):
     return encrypted_words    
 
 
-def decrypt(words):
+def decrypt(words, key):
+    '''
+    decrypt your string with caesar_cipher method:
+        inp ---> your inputed string
+        inp2 ---> the key you'v encrypted with..
+        out >>> the string after decrypt
+    '''
+    return encrypt(words, -key)
+
+
+def decrypt_randomly_key(words):
     '''
     Dncrypt your string with 'caesar_cipher' way:
         inp ---> your inputed encrypted string
